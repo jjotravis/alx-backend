@@ -40,7 +40,7 @@ class MRUCache(BaseCaching):
         Returns:
             The key of the item that was added or updated in the cache.
         """
-        if not key and item:
+        if not key or not item:
             return
 
         self.cache_data[key] = item
